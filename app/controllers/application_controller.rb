@@ -23,11 +23,10 @@ class ApplicationController < Sinatra::Base
     session[:user_id] = @user.id
     
     redirect '/users/home'
-    puts params
-  end
+    end
 
   get '/sessions/login' do
-
+   
     # the line of code below render the view page in app/views/sessions/login.erb
     erb :'sessions/login'
   end
